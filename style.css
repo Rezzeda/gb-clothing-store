@@ -69,8 +69,9 @@
 .promo__image {
     background-image: url(./img/header-man.png);
     background-repeat: no-repeat;
-    width: 1600px;
-    height: 764px;
+    background-size: 800.58px 764px;
+    background-position: left bottom;
+    width: 100%;
 }
 .promo__container {
     width: 100%;
@@ -81,11 +82,7 @@
 }
 
 .promo__decor {
-
-}
-
-.promo__info {
-    /* align-self: center; */
+    padding-right: 16px;
 }
 
 .promo__title {
@@ -112,14 +109,13 @@
 
 .sale {
     margin-top: 65px;
-    margin-bottom: 96px;
-    margin-left: 230px;
-    margin-right: 230px;
+    margin-bottom: 96px;    
 }
 .sale__container {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    justify-content: center;
 }
 
 .sale__items {
@@ -134,6 +130,7 @@
     justify-content: center;
     position: relative;
     background-repeat: no-repeat;
+    
 }
 
 .sale__item_small {
@@ -200,10 +197,9 @@
 }
 
 .product {
-    margin-left: 230px;
-    margin-right: 230px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .product__title {
@@ -289,4 +285,61 @@
     align-items: center;
     justify-content: center;
     align-self: center;
+}
+
+@media screen and (max-width: 1310px) {
+    .promo__image {
+    background-size: 386px 368px;
+    }
+
+    .promo {
+        min-height: 368px;
+    }
+
+    .promo__container {
+        padding-left: 5.08%;
+    }
+
+    .sale__container {
+        gap: 20px;
+    }
+
+    .sale__item_small {
+    min-width: 231.973px;
+    max-height: 167.617px;
+    }
+
+    .sale__item_large {
+        min-width: 734.581px;
+        max-height: 116.043px;
+    }
+
+    .product__cards {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 17px;
+        column-gap: 16px;
+        margin-bottom: 32.48px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .header__container-left {
+        padding-left: 4.17%;
+    }
+
+    .header__container-right {
+        padding-right: 4.17%;
+    }
+
+    .promo__title {
+        font-size: 44px;
+    }
+
+    .promo__subtitle {
+        font-size: 24px;
+    }
+    
+    .promo__accent {
+        font-size: 24px;
+    }
 }
