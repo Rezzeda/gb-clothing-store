@@ -17,7 +17,49 @@
         </ul>
         <nav class="header__container-right">
             <ul class="header__links">
-                <li class="header__link"><a href="#"><img src="./img/menu.svg" alt="menu icon" class="header__icon header__icon-menu"></a></li>
+                <li class="header__link">
+                    <label class="burger" for="burger_id">
+                        <img src="./img/menu.svg" alt="menu icon" class="header__icon header__icon-menu">
+                    </label>
+                        <input class="burger__check" type="checkbox" name="burger" id="burger_id">
+                        <ul class="burger-menu">
+                            <li><h3 class="burger-menu__title">MENU</h3></li>
+    
+                            <li><h4 class="burger-menu__heading">MAN</h4></li>
+                            <li>
+                                <ul class="burger-menu__section">
+                                    <li><a href="#" class="burger-menu__item">Accessories</a></li>
+                                    <li><a href="#" class="burger-menu__item">Bags</a></li>
+                                    <li><a href="#" class="burger-menu__item">Denim</a></li>
+                                    <li><a href="#" class="burger-menu__item">T-Shirts</a></li>
+                                </ul>
+                            </li>
+
+                            <li><h4 class="burger-menu__heading">WOMAN</h4></li>
+                            <li>
+                                <ul class="burger-menu__section">
+                                    <li><a href="#" class="burger-menu__item">Accessories</a></li>
+                                    <li><a href="#" class="burger-menu__item">Jackets & Coats</a></li>
+                                    <li><a href="#" class="burger-menu__item">Polos</a></li>
+                                    <li><a href="#" class="burger-menu__item">T-Shirts</a></li>
+                                    <li><a href="#" class="burger-menu__item">Shirts</a></li>
+                                </ul>
+                            </li>
+
+                            <li><h4 class="burger-menu__heading">KIDS</h4></li>
+                            <li>
+                                <ul class="burger-menu__section">
+                                    <li><a href="#" class="burger-menu__item">Accessories</a></li>
+                                    <li><a href="#" class="burger-menu__item">Jackets & Coats</a></li>
+                                    <li><a href="#" class="burger-menu__item">Polos</a></li>
+                                    <li><a href="#" class="burger-menu__item">T-Shirts</a></li>
+                                    <li><a href="#" class="burger-menu__item">Shirts</a></li>
+                                    <li><a href="#" class="burger-menu__item">Bags</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </li>
                 <li class="header__link"><a href="#"><img src="./img/icon-profile.png" alt="profile icon" class="header__icon header__icon-profile"></a></li>
                 <li class="header__link"><a href="#"><img src="./img/cart.svg" alt="cart icon" class="header__icon header__icon-cart"></a></li>
             </ul>
@@ -99,6 +141,53 @@
             </ul>
             <a href="#" class="product__btn_browse">Browse All Product</a>
         </section>
+        <section class="service">
+            <ul class="service__container">
+                <li class="service__card">
+                    <img class="service__image" src="./img/service-delivery-icon.svg" alt="service-delivery">
+                    <h2 class="service__title">Free Delivery</h2>
+                    <p class="service__text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+                </li>
+                <li class="service__card">
+                    <img class="service__image" src="./img/service-discount-icon.svg" alt="service-delivery">
+                    <h2 class="service__title">Sales & discounts</h2>
+                    <p class="service__text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+                </li>
+                <li class="service__card">
+                    <img class="service__image" src="./img/service-quality-icon.svg" alt="service-delivery">
+                    <h2 class="service__title">Quality assurance</h2>
+                    <p class="service__text">Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+                </li>
+            </ul>
+        </section>
+        <section class="feedback" aria-label="feedback">
+            <div class="feedback__container">
+                <div class="feedback__quotation">
+                    <img class="feedback__image" src="./feedback-people.png" alt="random person">
+                    <blockquote class="feedback__quote">
+                        <p class="feedback__quote-text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar <span class="feedback__quote-accent">purus condimentum</span>“</p>
+                    </blockquote>
+                </div>
+                <div class="feedback__subscibtion">
+                    <p class="feedback__title"><span class="feedback__title-accent">subscribe</span><br>for our newletter and promotions</p>
+                    <form class="feedback__form" action="feedback-input-email">
+                            <input class="feedback__input" type="email" name="enter-e-mail" id="enter e-mail" placeholder="Enter Your Email">
+                            <button class="feedback__button" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <h3 class="footer__copyright">&copy;&nbsp;2021 Brand All Rights Reserved.</h3>
+            <ul class="footer__links">
+                <li><a href="#" class="footer__link" target="_blank"><img class="footer__social-icon" src="./img/footer-icon-facebook-f.svg" alt="facebook icon"></a></li>
+                <li><a href="#" class="footer__link" target="_blank"><img class="footer__social-icon" src="./img/footer-icon-instagram.svg" alt="instagram icon"></a></li>
+                <li><a href="#" class="footer__link" target="_blank"><img class="footer__social-icon" src="./img/footer-icon-pinterest-p.svg" alt="pinterest icon"></a></li>
+                <li><a href="#" class="footer__link" target="_blank"><img class="footer__social-icon" src="./img/footer-icon-twitter.svg" alt="twitter icon"></a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
