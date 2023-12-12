@@ -317,6 +317,7 @@
     flex-direction: column;
     background-color: #F8F8F8;
     box-sizing: border-box;
+    position: relative;
 }
 
 .product__link {
@@ -430,7 +431,7 @@
     transition: all 0.3s;
 }
 
-.product__btn_browse:hover {
+.product__btn-browse:hover {
     background-color: #F16D7F;
     color: #FFF;
 }
@@ -744,7 +745,7 @@
         column-gap: unset;
     }
     .promo__container {
-        padding-left: 17,5%;
+        padding-left: 17.5%;
     }
 
     .promo__image {
