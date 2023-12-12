@@ -10,7 +10,6 @@
     margin: 0 auto;
 }
 
-/*  */
 .header {
     width: 100%;
     min-height: 75px;
@@ -52,6 +51,7 @@
     display: flex;
     flex-direction: row;
     column-gap: 20px;
+    position: relative;
 }
 
 .header__link {
@@ -63,13 +63,28 @@
     height: 29px;
 }
 
-.burger__check {
+.header__cart-items {
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    top: -7px;
+    right: -15px;
+    background-color: #F16D7F;
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 12px;
+    padding: 1px;
+    text-align: center;
+}
+
+.header__burger-check {
     display: none;
 }
 
-.burger__check:checked + .burger-menu {
+.header__burger-check:checked + .burger-menu {
     display: flex;
-    right: 0;
     row-gap: 12px;
 }
 
@@ -77,7 +92,7 @@
     display: none;
     position: absolute;
     flex-direction: column;
-    top: 75px;
+    top: 54px;
     right: -235px;
     padding: 32px 0 32px 32px;
     background: #fff;
@@ -301,6 +316,7 @@
     display: flex;
     flex-direction: column;
     background-color: #F8F8F8;
+    box-sizing: border-box;
 }
 
 .product__link {
@@ -312,12 +328,71 @@
     font-weight: 400;
     line-height: normal;
     text-indent: 16px;
+    position: relative;
+}
+
+.product__name {
+    color: #000;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: normal;
+    text-indent: 16px;
+    align-self: flex-start;
+    padding-top: 24.35px;
 }
 
 .product__image {
     width: 360px;
     height: 420px;
-    padding-bottom: 24px;
+}
+
+.product__link::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background-color: rgba(58, 56, 56, 0.86);
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.product__link:hover::before {
+    opacity: 1;
+}
+
+.product__cart-btn {
+    background-color: rgba(0, 0, 0, 0);
+    width: 139px;
+    min-height: 44px;
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    border: 1px solid currentColor;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    cursor: pointer;
+}
+
+.product__link:hover .product__cart-btn {
+    opacity: 1;
+}
+
+.product__cart-icon {
+    width: 26.005px;
+    height: 23.974px;
+    padding-right: 11px;
 }
 
 .product__about {
@@ -337,10 +412,10 @@
     padding-bottom: 16px;
 }
 
-.product__btn_browse {
+.product__btn-browse {
     width: 212px;
     height: 48px;
-    background: #FFF;
+    background-color: #FFF;
     color: #F26376;
     font-size: 16px;
     font-weight: 400;
@@ -352,6 +427,12 @@
     align-items: center;
     justify-content: center;
     align-self: center;
+    transition: all 0.3s;
+}
+
+.product__btn_browse:hover {
+    background-color: #F16D7F;
+    color: #FFF;
 }
 
 .service {
@@ -502,7 +583,7 @@
 .feedback__button {
     width: 100px;
     height: 49px;
-    background: #F16D7F;
+    background-color: #F16D7F;
     border: none;
     color: #FFF;
     text-align: center;
@@ -512,6 +593,11 @@
     text-indent: 0%;
     border-top-right-radius: 24px;
     border-bottom-right-radius: 24px;
+    transition: all 0.3s;
+}
+
+.feedback__button:hover {
+    background-color: #E05C6E;
 }
 
 .footer {
@@ -550,15 +636,24 @@
     list-style-type: none;
     text-decoration: none;
     background-color: #FFF;
-    background-size: 31.451px 32px;
     padding: 8px;
-    display: flex;
+    transition: all 0.3s;
+}
 
+
+.footer__link:hover {
+    background-color: #F16D7F;
 }
 
 .footer__social-icon {
     width: 15px;
     height: 16px;
+    transition: all 0.3s;
+    fill: #000;
+}
+
+.footer__link:hover .footer__social-icon {
+    fill: #FFF;
 }
 
 @media screen and (max-width: 1310px) {
@@ -603,6 +698,10 @@
 
     .header__container-right {
         padding-right: 4.17%;
+    }
+
+    .burger-menu {
+        right: 0;
     }
 
     .promo__title {
@@ -680,6 +779,10 @@
     }
 
     .header__icon-cart{
+        display: none;
+    }
+
+    .header__cart-items {
         display: none;
     }
     
