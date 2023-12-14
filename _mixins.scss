@@ -1,0 +1,18 @@
+@mixin flex_row($column-gap) {
+    display: flex;
+    flex-direction: row;
+    column-gap: $column-gap;
+}
+
+@mixin flex_column($row-gap) {
+    display: flex;
+    flex-direction: column;
+    row-gap: $row-gap;
+}
+
+@mixin text_styles($color, $size, $weight, $line-height) {
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line-height;
+}
