@@ -8,7 +8,7 @@
 
 .page {
     font-family: Lato, Arial, sans-serif;
-    max-width: $max-container-width;
+    // max-width: $max-container-width;
     background-color: $background-color-main;
     margin: 0 auto;
 }
@@ -748,7 +748,7 @@
         padding: 16px;
         font-size: 16px;
         border: none;
-        @include text_styles(#6F6E6E, 14px, 400, normal);
+        @include text_styles($dropdowm-text-color, 14px, 400, normal);
     }
 
     &__btn-toggle {
@@ -779,7 +779,7 @@
     }
 
     &__dropdown__item {
-        @include text_styles(#6F6E6E, 14px, 400, normal);
+        @include text_styles($dropdowm-text-color, 14px, 400, normal);
         padding: 12px 16px;
         text-decoration: none;
         display: block;
@@ -823,5 +823,199 @@
 
     &__cart-btn:hover &__cart-icon {
         fill: $text-color-light;
+    }
+}
+
+.filter-sort{
+    min-height: 132px;
+    position: relative;
+    @include flex-row(unset);
+    margin: 0 auto;
+    justify-content: center;
+    // align-items: center;
+
+
+    &__container {
+        width: 71%;
+        display: flex;
+    }
+
+    &__container-sort {
+        position: absolute;
+        top: 39px;
+        @include flex-row(28px);
+        
+    }
+}
+
+.filter {
+    box-sizing: border-box;
+    @include flex-row(unset);
+    // width: 360px;
+    position: relative;
+    // position: absolute;
+    padding-top: 13px;
+    // top: 39px;
+    z-index: 1;
+    
+    &[open] {
+        background-color: $background-color-main;
+        box-shadow: 2px 4px 35px rgba(0, 0, 0, 0.21);
+    }
+
+    &[open] &__heading {
+        color:$accent-color-dark
+    }
+
+    &[open] &__icon {
+        fill:$accent-color-dark
+    }
+
+    &__summary {
+        @include flex-row(11px);
+        align-items: center;
+        // position: absolute;
+        // padding: 13px 16px 16px;
+    }
+
+    &__heading {
+        @include text_styles($text-color-dark, 14px, 400, normal);
+        &[open] {
+            color:$accent-color-dark;
+        }
+    }
+
+    &__icon {
+        fill: $text-color-dark
+    }
+
+    &__title {
+        @include text_styles($text-color-dark, 14px, 400, normal);
+        width: 100%;
+        padding: 8px 11px 11px 11px;
+        border-bottom: 1px solid #EBEBEB;
+        border-left: 5px solid $accent-color-dark;
+    }
+
+    &__content {
+        width: 360px;
+        top: 35px;
+        position: absolute;
+        // padding: 13px 16px 16px;
+        background-color: #FFF;
+        
+        &[open] {
+            background-color: $background-color-main;
+            box-shadow: 2px 4px 35px rgba(0, 0, 0, 0.21);
+        }
+
+        &[open] .filter__title {
+            color:$accent-color-dark;
+        }
+    }
+
+    &__link-box {
+        @include flex-column(11px);
+        list-style-type: none;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    &__item {
+        text-decoration: none;
+    }
+
+    &__link {
+        @include text_styles($dropdowm-text-color, 14px, 400, normal);
+        text-decoration: none;
+        transition: all 0.3s;
+        &:hover {
+            color: $accent-color;
+        }
+    }
+}
+
+.sort {
+
+}
+
+.filter {
+    box-sizing: border-box;
+    @include flex-row(unset);
+    position: relative;
+    padding-top: 13px;
+    z-index: 1;
+
+    &[open] .filter__heading {
+        color: $accent-color-dark;
+    }
+
+    &[open] .filter__icon {
+        fill: $accent-color-dark;
+    }
+
+    &__summary {
+        @include flex-row(11px);
+        align-items: center;
+    }
+
+    &__heading {
+        @include text_styles($text-color-dark, 14px, 400, normal);
+
+        &[open] {
+            color: $accent-color-dark;
+        }
+    }
+
+    &__icon {
+        fill: $text-color-dark;
+    }
+
+    &__title {
+        @include text_styles($text-color-dark, 14px, 400, normal);
+        width: 100%;
+        padding: 8px 11px 11px 11px;
+        border-bottom: 1px solid #EBEBEB;
+        border-left: 5px solid $accent-color-dark;
+    }
+
+    &__content {
+        width: 360px;
+        margin-top: 10px;
+        background-color: #FFF;
+        box-shadow: 2px 4px 35px rgba(0, 0, 0, 0.21);
+
+        &[open] {
+            background-color: $background-color-main;
+        }
+
+        .filter__title {
+            color: $accent-color-dark;
+        }
+    }
+
+    &__link-box {
+        @include flex-column(11px);
+        list-style-type: none;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    &__item {
+        text-decoration: none;
+    }
+
+    &__link {
+        @include text_styles($dropdowm-text-color, 14px, 400, normal);
+        text-decoration: none;
+        transition: all 0.3s;
+
+        &:hover {
+            color: $accent-color;
+        }
     }
 }
