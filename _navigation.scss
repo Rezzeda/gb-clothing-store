@@ -1,0 +1,44 @@
+.navigation {
+    @include flex_row(unset);
+    min-height: 148px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $accent-color-light;
+    
+    // &__left {
+    //     padding-left: 231px;
+    // }
+
+    &__link-current {
+        text-decoration: none;
+        @include text_styles($accent-color, 24px, 400, normal);
+    }
+
+    // &__right {
+    //     padding-right: 231px;
+    // }
+
+    &__list {
+        color: $text-color-gray;
+        list-style-type: $breadcrumb-divider;
+        @include flex_row(15px);
+    }
+
+    &__item {
+        padding-left: 15px;
+    }
+
+    &__item:first-child {
+        list-style-type: none;
+    }
+
+    &__link {
+        text-decoration: none;
+        @include text_styles($text-color-gray, 14px, 300, normal);
+    }
+
+    &__link-active {
+        text-decoration: none;
+        @include text_styles($accent-color, 14px, 700, normal);
+    }
+}

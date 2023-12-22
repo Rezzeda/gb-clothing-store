@@ -1,0 +1,228 @@
+.cart{
+    @include flex_row(128px);
+    justify-content: center;
+    box-sizing: border-box;
+    padding-top: 118px;
+    padding-bottom: 128px;
+
+    &__container-left {
+        @include flex_column(72px);
+    }
+
+    &__cards {
+        list-style-type: none;
+        @include flex_column(40px);
+
+    }
+
+    &__card {
+        width: 652px;
+        height: 306px;
+        @include flex_row(31px);
+        box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.21);
+    }
+
+    &__image {
+        width: 262px;
+        height: 306px;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+
+    &__features {
+        @include flex_column(40px);
+    }
+
+    &__card-heading {
+        @include flex_row(75px);
+        width: 359px;
+
+    }
+
+    &__card-title {
+        @include text_styles($text-color-dark, 24px, 400, normal);
+        padding-top: 18px;
+        width: 262px;
+    }
+
+    &__button-delete-item {
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+    }
+
+    &__button-delete-icon {
+        width: 18px;
+        height: 18px;
+        padding: 28px 22px;
+        fill: #575757;
+        transition: all 0.3s;
+        &:hover {
+            fill: $accent-color;
+        }
+    }
+
+    &__details {
+        list-style-type: none;
+    }
+
+    &__detail {
+        @include flex_row(0.5em);
+    }
+
+    &__text-desc {
+        @include text_styles(#575757, 22px, 400, normal);
+    }
+
+    &__text-accent {
+        @include text_styles($accent-color-dark, 22px, 400, normal);
+    }
+
+    &__text {
+        @include text_styles(#575757, 22px, 400, normal);
+    }
+
+    &__quantity {
+        box-sizing: border-box;
+        width: 44px;
+        text-align: center;
+        align-self: center;
+        border: 1px #EAEAEA solid ;
+    }
+
+    &__options {
+        @include flex_row(unset);
+        justify-content: space-between;
+    }
+
+    &__option-btn {
+        width: 235px;
+        min-height: 50px;
+        @include text_styles($text-color-dark, 14px, 300, normal);
+        border: 1px solid #A4A4A4;
+        @include flex_row(unset);
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        background-color: $background-color-main;
+        transition: all 0.3s;
+        margin-bottom: 64px;
+
+        &:hover {
+            background-color: $accent-color;
+            color: $text-color-light;
+            border: $accent-color;
+        }
+    }
+
+
+    &__container-right {
+        @include flex_column(20px);
+    }
+
+    &__form-feedback-title {
+        @include text_styles($text-color-dark, 16px, 300, normal);
+    }
+
+    &__form-address {
+        @include flex_column(23px);
+    }
+
+    &__input-container {
+        border: none;
+        @include flex_column(20px);
+    }
+
+    &__input {
+        box-sizing: border-box;
+        border: 1px solid #A4A4A4;
+        padding: 13px;
+        width: 359px;
+        height: 44px;
+        @include text_styles(#B1B1B1, 13px, 300, normal);
+
+        &:focus, &:valid {
+            color: $text-color-dark;
+        }
+    }
+
+    &__button-address {
+        width: 102px;
+        min-height: 35px;
+        @include text_styles($text-color-dark, 11px, 300, normal);
+        border: 1px solid #A4A4A4;
+        @include flex_row(unset);
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        background-color: $background-color-main;
+        transition: all 0.3s;
+        margin-bottom: 64px;
+
+        &:hover {
+            background-color: $accent-color;
+            color: $text-color-light;
+            border: $accent-color;
+        }
+    }
+
+    &__total-price {
+        background-color: #F5F3F3;
+        box-sizing: border-box;
+        @include flex_column(unset);
+        width: 360px;
+        padding-top: 39px;
+    }
+
+    &__total {
+        @include flex_row(23px);
+        justify-content: flex-end;
+        padding-bottom: 21px;
+        padding-right: 34px;
+    }
+
+    &__price-itemtext {
+        @include text_styles(#4A4A4A, 11px, 400, normal);
+    }
+
+    &__price-text {
+        @include text_styles(#4A4A4A, 11px, 400, normal);
+    }
+
+    &__price-sum {
+        @include text_styles($text-color-dark, 16px, 300, normal);
+    }
+
+    &__sum {
+        @include text_styles($accent-color, 16px, 700, normal);
+    }
+
+    &__line-uncolored {
+        border-bottom: 1px solid #E2E2E2;
+        width: 275px;
+        align-self: flex-end;
+        margin-right: 34px;
+    }
+
+    &__button_submit-payment {
+        align-self: center;
+        margin-top: 17px;
+        width: 273px;
+        min-height: 50px;
+        @include text_styles($text-color-light, 16px, 300, normal);
+        border: 1px solid currentColor;
+        @include flex_row(unset);
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.3s;
+        cursor: pointer;
+        background-color: $accent-color;
+        transition: all 0.3s;
+        margin-bottom: 42px;
+
+        &:hover {
+            background-color: $background-color-main;
+            color: #F26376;
+            box-shadow: 3px 1px 6px 0px rgba(241, 109, 127, 0.25);
+        }
+    }
+}

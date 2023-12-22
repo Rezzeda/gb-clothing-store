@@ -1,0 +1,68 @@
+.header {
+    // width: 100%;
+    min-height: 75px;
+    background-color: $background-color-dark;
+    @include flex_row(unset);
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    &__container-left {
+        @include flex_row(20px);
+        list-style-type: none;
+        // padding-left: 231px;
+    }
+
+    &__logo {
+        width: 44px;
+        height: 38px;
+    }
+
+    &__search-icon {
+        width: 26.002px;
+        height: 26.792px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 7px;
+    }
+
+    // &__container-right {
+    //     // padding-right: 240px;
+    // }
+
+    &__links {
+        @include flex_row(20px);
+        list-style-type: none;
+        position: relative;
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+
+    &__icon-menu {
+        width: 52px;
+        height: 29px;
+    }
+
+    &__cart-items {
+        width: 19px;
+        height: 19px;
+        position: absolute;
+        top: -7px;
+        right: -15px;
+        background-color: $accent-color;
+        @include text_styles($text-color-light, 12px, 400, normal);
+        border-radius: 12px;
+        padding: 1px;
+        text-align: center;
+    }
+
+    &__burger-check {
+        display: none;
+    }
+
+    &__burger-check:checked + .burger-menu {
+        @include flex_column(12px);
+    }
+}

@@ -1,0 +1,144 @@
+.description {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    min-height: 601px;
+    padding-bottom: 129px;
+    
+&__container {
+    width: 71%;
+    background-color: $background-color-main;
+    position: absolute;
+    top: 0;
+    transform: translate(0, -10%);
+    @include flex_column(unset);
+    align-items: center;
+}
+
+&__subtitle {
+    @include text_styles($accent-color, 14px, 300, normal);
+    margin-top: 65px;
+    max-width: 1140px;
+}
+
+&__line-colored {
+    width: 63px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-bottom: 3px solid $accent-color-dark;
+}
+
+&__title {
+    @include text_styles(#4D4D4D, 18px, 300, normal);
+    margin-bottom: 48.5px;
+    max-width: 555px;
+}
+
+&__text {
+    @include text_styles(#5E5E5E, 14px, 300, normal);
+    max-width: 555px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+&__price {
+    @include text_styles($accent-color-dark, 24px, 300, normal);
+}
+
+&__line-uncolored {
+    width: 100%;
+    max-width: 641px;
+    margin-top: 65px;
+    margin-bottom: 65px;
+    border-bottom: 1px solid #EAEAEA;
+}
+
+&__dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 11;
+}
+
+&__btn-drop {
+    text-decoration: none;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    @include text_styles($dropdowm-text-color, 14px, 400, normal);
+}
+
+&__btn-toggle {
+    white-space: nowrap;
+}
+
+&__btn-toggle::after {
+    content: url('./img/dropdown-toggle.svg');
+    display: inline-block;
+    width: 10px;
+    height: 5px;
+    margin-left: 0.5em;
+    vertical-align: top;
+}
+
+&__dropdown-menu {
+    list-style-type: none;
+    display: none;
+    position: absolute;
+    top: 1.2em;
+    right: 0;
+    background-color: $background-color-main;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    overflow-y: scroll;
+    height: 100px;
+}
+
+&__dropdown__item {
+    @include text_styles($dropdowm-text-color, 14px, 400, normal);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+&__dropdown__item:hover {
+    background-color: $dropdown-bg;
+}
+
+&__dropdown:hover &__dropdown-menu {
+    display: block;
+}
+
+&__cart-btn {
+    margin-top: 48px;
+    width: 212px;
+    min-height: 48px;
+    @include text_styles($background-color-main, 14px, 400, normal);
+    border: 1px solid currentColor;
+    @include flex_row(unset);
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+    cursor: pointer;
+    background-color: $background-color-main;
+    color: #F26376;
+    transition: all 0.3s;
+    margin-bottom: 64px;
+}
+
+&__cart-icon {
+    fill: $accent-color-dark;
+    padding-right: 1em;
+    transition: all 0.3s;
+}
+
+&__cart-btn:hover {
+    background-color: $accent-color;
+    color: $text-color-light;
+}
+
+&__cart-btn:hover &__cart-icon {
+    fill: $text-color-light;
+}
+}

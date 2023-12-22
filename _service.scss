@@ -1,0 +1,33 @@
+.service {
+    // width: 100%;
+    min-height: 341px;
+    background-color: $background-color-dark;
+
+    &__container{
+        list-style-type: none;
+        @include flex_row(30px);
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__card {
+        @include flex_column(16px);
+        align-items: center;
+        margin-top: 103px;
+    }
+
+    &__image {
+        width: fit-content;
+        height: fit-content;
+    }
+
+    &__title {
+        @include text_styles($text-on-dark, 19.96px, 400, normal);
+    }
+
+    &__text {
+        @include text_styles($text-on-dark, 14px, 300, normal);
+        text-align: center;
+        max-width: 360px;
+    }
+}

@@ -1,0 +1,38 @@
+.promo {
+    min-height: 764px;
+    background-color: #F1E4E6;
+    @include flex_row(unset);
+
+    &__image {
+        background-image: url(./img/header-man.png);
+        background-repeat: no-repeat;
+        background-size: 800.58px 764px;
+        background-position: left bottom;
+        width: 100%;
+    }
+
+    &__container { 
+        width: 100%;
+        @include flex_row(unset);
+        align-items: center;
+        padding-left: 91.42px;
+    }
+
+    &__decor { 
+        padding-right: 16px;
+    }
+
+    &__title {
+        @include text_styles($text-color-dark, 48px, 900, normal);
+        text-transform: uppercase;
+    }
+
+    &__subtitle {
+        @include text_styles($text-color-dark, 32px, 700, normal);
+        text-transform: uppercase;
+    }
+
+    &__accent {
+        @include text_styles($accent-color, 32px, 700, normal);
+    }
+}

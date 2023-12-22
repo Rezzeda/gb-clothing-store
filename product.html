@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body class="page">
-    <header class="header">
+    <header class="header center">
         <ul class="header__container-left">
             <li class="header__link"><a href="./index.html"><img src="./img/header-logo.svg" alt="header logo" class="header__logo"></a></li>
             <li  class="header__link"><a href="#"><img src="./img/icon-search.svg" alt="search icon" class="header__search-icon"></a></li>
@@ -61,7 +61,7 @@
                 </li>
                 <li class="header__link"><a href="#"><img src="./img/icon-profile.png" alt="profile icon" class="header__icon header__icon-profile"></a></li>
                 <li class="header__link">
-                    <a href="#">
+                    <a href="./cart.html">
                         <img src="./img/cart.svg" alt="cart icon" class="header__icon header__icon-cart">
                         <div class="header__cart-items">5</div>
                     </a>
@@ -70,7 +70,7 @@
         </nav>
     </header>
     <main class="content">
-        <section class="navigation">
+        <section class="navigation center" aria-label="site navigation">
             <div class="navigation__left">
                 <a class="navigation__link-current" href="./catalog.html">NEW ARRIVALS</a>
             </div>
@@ -82,7 +82,7 @@
                 </ul>
             </nav>
         </section>
-        <section class="carousel">
+        <section class="carousel" aria-label="photo carousel">
             <div id="carouselExample" class="carousel__slide">
                 <div class="carousel__container">
                     <div class="carousel__item  carousel__item_active">
@@ -96,7 +96,6 @@
                     <svg class="carousel__control-prev-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 31">
                         <path d="M21.6998 7.7499L13.9498 15.4999L21.6998 23.2499L20.1498 26.3499L9.2998 15.4999L20.1498 4.6499L21.6998 7.7499Z"/>
                     </svg>
-                    <!-- <span class="carousel__control-prev-icon" aria-hidden="true"><img src="./img/icon_arrow-left.svg" alt=""></span> -->
                     <span class="carousel__visually-hidden">Previous</span>
                 </button>
                 <button class="carousel__control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
@@ -180,7 +179,7 @@
                 </li>
             </ul>
         </section>
-        <section class="feedback" aria-label="feedback">
+        <section class="feedback center" aria-label="feedback">
             <div class="feedback__container">
                 <div class="feedback__quotation">
                     <img class="feedback__image" src="./img/feedback-people.png" alt="random person">
@@ -198,7 +197,7 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
+    <footer class="footer center">
         <div class="footer__container">
             <h3 class="footer__copyright">&copy;&nbsp;2021 Brand All Rights Reserved.</h3>
             <ul class="footer__links">

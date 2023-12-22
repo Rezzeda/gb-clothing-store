@@ -1,0 +1,104 @@
+.feedback {
+    // width: 100%;
+    min-height: 448px;
+    background-image: url(./img/feedback-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+        content: "";
+        background-color: rgba(244, 244, 244, 0.70);
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+
+    &__container {
+        width: 100%;
+        @include flex_row(unset);
+        z-index: 1;
+        justify-content: space-between;
+    }
+
+    &__quotation{
+        @include flex_column(30px);
+        align-items: center;
+    }
+
+    &__image {
+        width: 96px;
+        min-width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
+
+    &__quote-text {
+        @include text_styles($text-color-dark, 20px, 400, normal);
+        text-align: center;
+        width: 359.449px;
+        min-height: 99px;
+    }
+
+    &__quote-accent {
+        font-style: italic;
+    }
+
+    &__subscibtion {
+        @include flex_column(30px);
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__title {
+        @include text_styles($text-color-dark, 18px, 400, 167.2%);
+        max-width: 360px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__title-accent {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    &__form {
+        display: flex;
+    }
+
+    &__input{
+        background-color: #E1E1E1;
+        border: none;
+        width: 256px;
+        height: 49px;
+        text-indent: 0%;
+        border-top-left-radius: 24px;
+        border-bottom-left-radius: 24px;
+        padding-left: 22px;
+    }
+
+    &__button {
+        width: 100px;
+        height: 49px;
+        background-color: $accent-color;
+        border: none;
+        @include text_styles($text-color-light, 14px, 400, normal);
+        text-align: center;
+        text-indent: 0%;
+        border-top-right-radius: 24px;
+        border-bottom-right-radius: 24px;
+        transition: all 0.3s;
+    }
+
+    &__button:hover {
+        background-color: #E05C6E;
+    }
+}
