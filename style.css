@@ -1283,6 +1283,135 @@
   line-height: normal;
 }
 
+.registration {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 128px;
+       column-gap: 128px;
+  box-sizing: border-box;
+  padding-top: 64px;
+  padding-bottom: 96px;
+}
+.registration__form-address {
+  display: flex;
+  flex-direction: column;
+  row-gap: 23px;
+}
+.registration__input-container {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.registration__input {
+  box-sizing: border-box;
+  border: 1px solid #A4A4A4;
+  padding: 13px;
+  width: 359px;
+  height: 44px;
+  color: #B1B1B1;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: normal;
+}
+.registration__input:focus, .registration__input:valid {
+  color: #222;
+}
+.registration__radioboxes {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 21px;
+       column-gap: 21px;
+}
+.registration__radiobox {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.registration__label {
+  color: #222;
+  font-size: 11px;
+  font-weight: 300;
+  line-height: normal;
+}
+.registration__contaner-right {
+  display: flex;
+  flex-direction: column;
+  row-gap: 21px;
+}
+.registration__input-title {
+  color: #222;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: normal;
+}
+.registration__text {
+  color: #222;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: normal;
+}
+.registration__advantages {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+.registration__advantage {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 23px;
+       column-gap: 23px;
+  align-items: center;
+}
+.registration__advantage-mark {
+  width: 20px;
+  height: 16px;
+}
+.registration__button-submit {
+  margin-top: 39px;
+  width: 167px;
+  min-height: 50px;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  border: 1px solid currentColor;
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s;
+  cursor: pointer;
+  background-color: #FFF;
+  color: #F16D7F;
+  transition: all 0.3s;
+  margin-bottom: 64px;
+  padding-left: 29px;
+}
+.registration__button-submit:hover {
+  background-color: #F16D7F;
+  color: #FFF;
+}
+.registration__button-icon {
+  fill: #EF5B70;
+  padding-right: 20px;
+  transition: all 0.3s;
+}
+.registration__button-submit:hover .registration__button-icon {
+  fill: #FFF;
+}
+
+.password-error {
+  color: #B1B1B1;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
