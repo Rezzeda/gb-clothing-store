@@ -4,7 +4,6 @@ $background-color-dark: #222;
 $accent-color: #F16D7F;
 $accent-color-dark: #EF5B70;
 $text-color-light: #FFF;
-$breadcrumb-divider: quote("/");
 $accent-color-light: #F8F3F4;
 $text-color-dark: #222;
 $text-color-gray: #636363;
@@ -21,3 +20,6 @@ $max-container-width: 1600px;
 // Переменные для отступов
 $default-margin: 0;
 $default-padding: 0;
+
+//разделитель в навигации
+$breadcrumb-divider: quote("/");

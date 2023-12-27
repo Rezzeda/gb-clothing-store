@@ -1035,7 +1035,6 @@
   row-gap: 25px;
   -moz-column-gap: 30px;
        column-gap: 30px;
-  margin-bottom: 48px;
 }
 .product__card {
   max-width: 360px;
@@ -1303,6 +1302,12 @@
   flex-direction: column;
   row-gap: 20px;
 }
+.registration__input-title {
+  color: #222;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: normal;
+}
 .registration__input {
   box-sizing: border-box;
   border: 1px solid #A4A4A4;
@@ -1340,9 +1345,9 @@
   flex-direction: column;
   row-gap: 21px;
 }
-.registration__input-title {
+.registration__title {
   color: #222;
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 300;
   line-height: normal;
 }
@@ -1410,6 +1415,43 @@
   font-size: 13px;
   font-weight: 300;
   line-height: normal;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 140px;
+}
+.pagination__box {
+  box-sizing: border-box;
+  color: black;
+  padding: 8px 16px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 18px;
+       column-gap: 18px;
+  border: 1px #EBEBEB solid;
+  border-radius: 2px;
+}
+.pagination__link {
+  text-decoration: none;
+  color: #222;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: normal;
+  opacity: 0.3;
+}
+.pagination__link-active {
+  color: #EF5B70;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: normal;
+  opacity: 1;
+}
+.pagination__link-nav {
+  opacity: 1;
 }
 
 * {

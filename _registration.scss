@@ -13,6 +13,10 @@
         @include flex_column(20px);
     }
 
+    &__input-title {
+        @include text_styles($text-color-dark, 16px, 300, normal);
+    }
+
     &__input {
         box-sizing: border-box;
         border: 1px solid #A4A4A4;
@@ -42,8 +46,8 @@
         @include flex_column(21px);
     }
 
-    &__input-title {
-        @include text_styles($text-color-dark, 16px, 300, normal);
+    &__title {
+        @include text_styles($text-color-dark, 24px, 300, normal);
     }
 
     &__text {
@@ -60,7 +64,7 @@
         align-items: center;
     }
 
-    &__advantage-mark{
+    &__advantage-mark {
         width: 20px;
         height: 16px;
     }

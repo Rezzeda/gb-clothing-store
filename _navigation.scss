@@ -4,19 +4,11 @@
     justify-content: space-between;
     align-items: center;
     background-color: $accent-color-light;
-    
-    // &__left {
-    //     padding-left: 231px;
-    // }
 
     &__link-current {
         text-decoration: none;
         @include text_styles($accent-color, 24px, 400, normal);
     }
-
-    // &__right {
-    //     padding-right: 231px;
-    // }
 
     &__list {
         color: $text-color-gray;
