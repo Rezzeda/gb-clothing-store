@@ -34,3 +34,10 @@
         @include text_styles($accent-color, 14px, 700, normal);
     }
 }
+
+@media screen and (max-width: 736px) {
+    .navigation {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}

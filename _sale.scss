@@ -78,3 +78,48 @@
         z-index: 1;
     }
 }
+
+@media screen and (max-width: 1310px) {
+
+    .sale{
+        &__container {
+            gap: 20px;
+        }
+
+        &__item_small {
+        min-width: 231.973px;
+        max-height: 167.617px;
+        }
+
+        &__item_large {
+            min-width: 734.581px;
+            max-height: 116.043px;
+        }
+    }
+}
+
+@media screen and (max-width: 736px) {
+
+    .sale {
+        &__item_small {
+            min-width: 343px;
+        }
+        
+        &__item_large {
+            min-width: 343px;
+        }
+    }
+}
+
+@media screen and (max-width: 362px) {
+
+    .sale{
+        &__item_small {
+            min-width: 320px;
+        }
+        
+        &__item_large {
+            min-width: 320px;
+        }
+    }
+}

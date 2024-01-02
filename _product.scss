@@ -126,3 +126,29 @@
         color: $text-color-light;
     }
 }
+
+@media screen and (max-width: 1310px) {
+    .product__cards {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 17px;
+        column-gap: 16px;
+        margin-bottom: 32.48px;
+    }
+}
+
+@media screen and (max-width: 736px) {
+
+    .product {
+        &__cards {
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: 17px;
+            column-gap: 16px;
+            margin-bottom: 32.48px;
+        }
+    
+        &__image {
+            width: 359px;
+        }
+    }
+}
+

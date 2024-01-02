@@ -1,5 +1,4 @@
 .footer {
-    // width: 100%;
     min-height: 79px;
     background-color: $background-color-dark;
     @include flex_row(unset);
@@ -9,8 +8,6 @@
         @include flex_row(unset);
         justify-content: space-between;
         align-items: center;
-        // margin-left: 14.69%;
-        // margin-right: 14.69%;
     }
 
     &__copyright {
@@ -43,5 +40,14 @@
 
     &__link:hover .footer__social-icon {
         fill: $background-color-main;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .footer__container {
+        flex-direction: column-reverse;
+        margin-top: 43px;
+        margin-bottom: 9px;
+        row-gap: 40px;
     }
 }

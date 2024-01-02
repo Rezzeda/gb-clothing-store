@@ -1,5 +1,4 @@
 .header {
-    // width: 100%;
     min-height: 75px;
     background-color: $background-color-dark;
     @include flex_row(unset);
@@ -10,7 +9,6 @@
     &__container-left {
         @include flex_row(20px);
         list-style-type: none;
-        // padding-left: 231px;
     }
 
     &__logo {
@@ -25,10 +23,6 @@
         background-size: cover;
         padding-top: 7px;
     }
-
-    // &__container-right {
-    //     // padding-right: 240px;
-    // }
 
     &__links {
         @include flex_row(20px);
@@ -64,5 +58,25 @@
 
     &__burger-check:checked + .burger-menu {
         @include flex_column(12px);
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .header {
+        &__links {
+            column-gap: unset;
+        }
+    
+        &__icon-profile{
+            display: none;
+        }
+    
+        &__icon-cart{
+            display: none;
+        }
+    
+        &__cart-items {
+            display: none;
+        }
     }
 }

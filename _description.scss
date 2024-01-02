@@ -54,6 +54,11 @@
     border-bottom: 1px solid #EAEAEA;
 }
 
+&__dropdowns{
+    display: flex;
+    flex-direction: row;
+}
+
 &__dropdown {
     position: relative;
     display: inline-block;
@@ -141,4 +146,11 @@
 &__cart-btn:hover &__cart-icon {
     fill: $text-color-light;
 }
+}
+
+@media screen and (max-width: 736px) {
+
+    .description__btn-drop {
+    font-size: 10px;
+    }
 }

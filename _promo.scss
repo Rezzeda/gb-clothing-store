@@ -36,3 +36,40 @@
         @include text_styles($accent-color, 32px, 700, normal);
     }
 }
+
+@media screen and (max-width: 1310px) {
+
+    .promo {
+        min-height: 368px;
+
+        &__image {
+            background-size: 386px 368px;
+            }
+
+        &__container {
+            padding-left: 5.08%;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .promo{
+        &__title {
+            font-size: 44px;
+        }
+
+        &__subtitle {
+            font-size: 24px;
+        }
+        
+        &__accent {
+            font-size: 24px;
+        }
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .promo__image {
+        display: none;
+    }
+}

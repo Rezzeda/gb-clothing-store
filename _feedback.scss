@@ -102,3 +102,32 @@
         background-color: #E05C6E;
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .feedback{
+        &__container {
+            flex-direction: column;
+            row-gap: 48px;
+            margin-top: 64px;
+            margin-bottom: 140px;
+        }
+    }
+}
+
+@media screen and (max-width: 736px) {
+
+    .feedback{
+        &__input{
+            width: 190px;
+        }
+
+        &__quote-text {
+            font-size: 18px;
+            width: 320px;
+        }
+
+        &__title {
+            max-width: 271px;
+        }
+    }
+}

@@ -106,3 +106,10 @@
 .password-error {
     @include text_styles(#B1B1B1, 13px, 300, normal);
 }
+
+@media screen and (max-width: 1024px) {
+    .registration {
+        flex-direction: column;
+        row-gap: unset;
+    }
+}

@@ -1,5 +1,4 @@
 .service {
-    // width: 100%;
     min-height: 341px;
     background-color: $background-color-dark;
 
@@ -29,5 +28,31 @@
         @include text_styles($text-on-dark, 14px, 300, normal);
         text-align: center;
         max-width: 360px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .service{
+        &__container{
+            flex-direction: column;
+            column-gap: unset;
+        }
+
+        &__card {
+            margin-top: 48px;
+            margin-bottom: 64px;
+        }
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .service__text {
+        max-width: 347.82px;
+    }
+}
+
+@media screen and (max-width: 362px) {
+    .service__text {
+        max-width: 320px;
     }
 }
